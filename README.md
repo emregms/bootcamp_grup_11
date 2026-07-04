@@ -21,6 +21,18 @@ Modern ve interaktif bir **Eğitim, Mentorluk ve Eşleşme** platformu. Next.js 
 - **[Lucide React](https://lucide.dev/):** Hafif ve ölçeklenebilir ikon kütüphanesi.
 - **CSS Modules & Vanilla CSS:** Bileşen bazlı (component-scoped) stil mimarisi.
 
+## 📸 Ekran Görüntüleri
+
+Buraya projenin temel sayfalarından ekran görüntüleri ekleyebilirsiniz. Görselleri projedeki `public/` klasörüne ekleyip aşağıdaki yolları güncelleyebilirsiniz:
+
+| Ana Sayfa | Kullanıcı Paneli (Dashboard) |
+| :---: | :---: |
+| ![Ana Sayfa](https://via.placeholder.com/600x400?text=Ana+Sayfa+Ekrani) | ![Dashboard](https://via.placeholder.com/600x400?text=Dashboard+Ekrani) |
+
+| Eğitimler (Lessons) | Mentorlar (Explore) |
+| :---: | :---: |
+| ![Eğitimler](https://via.placeholder.com/600x400?text=Egitimler+Ekrani) | ![Mentorlar](https://via.placeholder.com/600x400?text=Mentorlar+Ekrani) |
+
 ## 📂 Proje Yapısı
 
 | Klasör / Dosya | Açıklama |

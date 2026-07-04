@@ -1,0 +1,66 @@
+.page { padding: var(--space-2xl) 0 var(--space-4xl); }
+.container { max-width: 640px; }
+
+.header { text-align: center; margin-bottom: var(--space-2xl); }
+.headerIcon { color: var(--success); margin-bottom: var(--space-md); }
+.header h1 { margin-bottom: var(--space-sm); }
+.header p { font-size: var(--font-size-lg); color: var(--text-secondary); }
+
+.steps { display: flex; justify-content: center; gap: var(--space-2xl); margin-bottom: var(--space-2xl); position: relative; }
+.step { display: flex; flex-direction: column; align-items: center; gap: var(--space-sm); position: relative; z-index: 1; }
+.stepCircle { width: 36px; height: 36px; border-radius: var(--radius-full); background: var(--bg-glass); border: 2px solid var(--border-subtle); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: var(--font-size-sm); color: var(--text-tertiary); transition: all var(--transition-base); }
+.step span { font-size: var(--font-size-xs); color: var(--text-tertiary); font-weight: 500; }
+.stepActive .stepCircle { background: var(--primary); border-color: var(--primary); color: white; }
+.stepActive span { color: var(--primary-light); }
+.stepDone .stepCircle { background: var(--success); border-color: var(--success); color: white; }
+.stepDone span { color: var(--success); }
+
+.card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-2xl); padding: var(--space-2xl); }
+.card h2 { font-size: var(--font-size-xl); margin-bottom: var(--space-xl); }
+
+.lessonSummary { display: flex; flex-direction: column; gap: var(--space-md); margin-bottom: var(--space-xl); }
+.lessonRow { display: flex; justify-content: space-between; font-size: var(--font-size-sm); }
+.lessonRow span { color: var(--text-secondary); }
+.lessonRow strong { color: var(--text-primary); }
+
+.escrowInfo { display: flex; gap: var(--space-md); padding: var(--space-md); background: var(--success-bg); border-radius: var(--radius-lg); margin-bottom: var(--space-xl); }
+.escrowInfo svg { color: var(--success); flex-shrink: 0; margin-top: 2px; }
+.escrowInfo h4 { font-size: var(--font-size-sm); color: var(--success); margin-bottom: 4px; }
+.escrowInfo p { font-size: var(--font-size-xs); color: var(--text-secondary); }
+
+.priceBreakdown { padding: var(--space-lg) 0; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); margin-bottom: var(--space-xl); display: flex; flex-direction: column; gap: var(--space-sm); }
+.priceRow { display: flex; justify-content: space-between; font-size: var(--font-size-sm); color: var(--text-secondary); }
+.totalRow { padding-top: var(--space-sm); border-top: 1px solid var(--border-subtle); }
+.totalRow span, .totalRow strong { color: var(--text-primary); font-size: var(--font-size-lg); }
+
+.paymentMethods { display: flex; gap: var(--space-sm); margin-bottom: var(--space-xl); }
+.methodBtn { flex: 1; display: flex; align-items: center; justify-content: center; gap: var(--space-sm); padding: 14px; border-radius: var(--radius-lg); background: var(--bg-glass); border: 1.5px solid var(--border-subtle); font-size: var(--font-size-sm); font-weight: 600; color: var(--text-secondary); transition: all var(--transition-base); }
+.methodBtn:hover { border-color: var(--border-default); }
+.methodActive { border-color: var(--primary) !important; background: rgba(108,92,231,0.08) !important; color: var(--primary-light) !important; }
+
+.form { display: flex; flex-direction: column; gap: var(--space-lg); }
+.formGroup { display: flex; flex-direction: column; gap: var(--space-sm); }
+.formGroup label { font-size: var(--font-size-sm); font-weight: 600; color: var(--text-primary); }
+.formRow { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); }
+.cardInput { position: relative; display: flex; align-items: center; }
+.cardInput svg:first-child { position: absolute; left: 14px; color: var(--text-tertiary); }
+.cardInput input { padding-left: 44px; padding-right: 40px; }
+.lockIcon { position: absolute; right: 14px; color: var(--success); }
+
+.securityNote { display: flex; align-items: center; gap: var(--space-sm); font-size: var(--font-size-xs); color: var(--success); }
+.formActions { display: flex; justify-content: space-between; padding-top: var(--space-md); }
+
+/* Confirmation */
+.confirmCard { text-align: center; }
+.confirmIcon { color: var(--success); margin-bottom: var(--space-md); }
+.confirmDesc { font-size: var(--font-size-sm); color: var(--text-secondary); max-width: 400px; margin: var(--space-md) auto var(--space-xl); }
+.confirmDetails { text-align: left; padding: var(--space-lg); background: var(--bg-glass); border-radius: var(--radius-lg); margin-bottom: var(--space-xl); display: flex; flex-direction: column; gap: var(--space-sm); }
+.confirmRow { display: flex; justify-content: space-between; font-size: var(--font-size-sm); }
+.confirmRow span { color: var(--text-secondary); }
+
+.escrowFlow { display: flex; justify-content: center; gap: var(--space-xl); margin-bottom: var(--space-xl); position: relative; }
+.flowStep { display: flex; flex-direction: column; align-items: center; gap: var(--space-sm); }
+.flowDot { width: 12px; height: 12px; border-radius: 50%; background: var(--bg-glass); border: 2px solid var(--border-default); }
+.flowActive .flowDot { background: var(--success); border-color: var(--success); box-shadow: 0 0 10px rgba(0,184,148,0.4); }
+.flowStep span { font-size: 11px; color: var(--text-tertiary); max-width: 80px; text-align: center; }
+.flowActive span { color: var(--success); font-weight: 600; }

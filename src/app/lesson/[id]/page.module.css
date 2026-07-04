@@ -1,0 +1,41 @@
+.page { padding: var(--space-2xl) 0 var(--space-4xl); }
+.grid { display: grid; grid-template-columns: 1fr 380px; gap: var(--space-2xl); align-items: start; }
+
+.breadcrumb { font-size: var(--font-size-sm); color: var(--text-tertiary); margin-bottom: var(--space-md); }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--primary-light); }
+
+.main h1 { font-size: var(--font-size-3xl); margin-bottom: var(--space-md); }
+.metaRow { display: flex; align-items: center; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-2xl); }
+.metaItem { display: flex; align-items: center; gap: 4px; font-size: var(--font-size-sm); color: var(--text-secondary); }
+
+.section { margin-bottom: var(--space-2xl); }
+.section h2 { font-size: var(--font-size-xl); margin-bottom: var(--space-md); }
+.description { font-size: var(--font-size-base); color: var(--text-secondary); line-height: 1.8; }
+
+.learningList { display: flex; flex-direction: column; gap: var(--space-md); }
+.learningItem { display: flex; align-items: center; gap: var(--space-md); font-size: var(--font-size-sm); color: var(--text-primary); }
+.learningItem svg { color: var(--success); flex-shrink: 0; }
+
+.tags { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+.tag { padding: 6px 14px; background: var(--bg-glass); border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); font-size: var(--font-size-sm); color: var(--text-secondary); }
+
+.mentorCard { display: flex; align-items: center; gap: var(--space-md); padding: var(--space-lg); background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); text-decoration: none; transition: all var(--transition-base); }
+.mentorCard:hover { border-color: var(--border-default); }
+.mentorAvatar { width: 56px; height: 56px; border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: var(--font-size-xl); flex-shrink: 0; }
+.mentorCard h3 { display: flex; align-items: center; gap: 6px; font-size: var(--font-size-base); margin-bottom: 4px; }
+.mentorCard p { font-size: var(--font-size-xs); color: var(--text-secondary); margin-bottom: 6px; }
+.mentorStats { display: flex; gap: var(--space-md); }
+.mentorStats span { display: flex; align-items: center; gap: 4px; font-size: var(--font-size-xs); color: var(--text-tertiary); }
+
+/* Sidebar */
+.sidebar { position: sticky; top: calc(var(--navbar-height) + 24px); }
+.enrollCard { padding: var(--space-xl); background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); display: flex; flex-direction: column; gap: var(--space-md); }
+.priceRow { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm); }
+.price { font-size: var(--font-size-4xl); font-weight: 800; color: var(--primary-light); }
+.swapPrice { display: flex; align-items: center; gap: 6px; font-size: var(--font-size-sm); color: var(--secondary); font-weight: 600; }
+.enrollInfo { display: flex; flex-direction: column; gap: var(--space-sm); padding: var(--space-md) 0; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
+.infoItem { display: flex; align-items: center; gap: var(--space-sm); font-size: var(--font-size-sm); color: var(--text-secondary); }
+.infoItem svg { color: var(--text-tertiary); }
+
+@media (max-width: 1024px) { .grid { grid-template-columns: 1fr; } .sidebar { position: relative; top: 0; } }

@@ -1,0 +1,59 @@
+.page { padding: var(--space-2xl) 0 var(--space-4xl); }
+.page h1 { margin-bottom: var(--space-2xl); }
+
+.layout { display: grid; grid-template-columns: 220px 1fr; gap: var(--space-2xl); }
+
+.tabList { display: flex; flex-direction: column; gap: var(--space-xs); position: sticky; top: calc(var(--navbar-height) + 24px); height: fit-content; }
+.tabItem {
+  display: flex; align-items: center; gap: var(--space-sm); padding: 12px 16px;
+  border-radius: var(--radius-md); font-size: var(--font-size-sm); font-weight: 500;
+  color: var(--text-secondary); transition: all var(--transition-fast); text-align: left; width: 100%;
+}
+.tabItem:hover { color: var(--text-primary); background: var(--bg-glass); }
+.tabActive { color: var(--primary-light) !important; background: rgba(108,92,231,0.1) !important; font-weight: 600; }
+
+.section { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: var(--space-xl); margin-bottom: var(--space-xl); }
+.section h2 { font-size: var(--font-size-lg); margin-bottom: var(--space-xl); }
+
+.avatarSection { display: flex; align-items: center; gap: var(--space-lg); margin-bottom: var(--space-xl); }
+.avatar { width: 80px; height: 80px; border-radius: var(--radius-full); background: var(--gradient-hero); display: flex; align-items: center; justify-content: center; color: white; font-size: var(--font-size-2xl); font-weight: 800; }
+
+.form { display: flex; flex-direction: column; gap: var(--space-lg); }
+.formGroup { display: flex; flex-direction: column; gap: var(--space-sm); flex: 1; }
+.formGroup label { display: flex; align-items: center; gap: 6px; font-size: var(--font-size-sm); font-weight: 600; color: var(--text-primary); }
+.formRow { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); }
+.textarea { resize: vertical; min-height: 100px; }
+
+.skillsInput { display: flex; flex-wrap: wrap; gap: var(--space-sm); padding: 10px 14px; background: var(--bg-input); border: 1.5px solid var(--border-subtle); border-radius: var(--radius-md); }
+.skillChip { padding: 4px 10px; background: rgba(108,92,231,0.12); color: var(--primary-light); border-radius: var(--radius-pill); font-size: var(--font-size-xs); font-weight: 500; cursor: pointer; }
+.interestChip { background: rgba(0,206,201,0.12); color: var(--secondary); }
+.inlineInput { border: none; background: none; outline: none; color: var(--text-primary); font-size: var(--font-size-sm); min-width: 120px; }
+.inlineInput::placeholder { color: var(--text-tertiary); }
+
+.formActions { display: flex; justify-content: flex-end; padding-top: var(--space-md); }
+
+/* Settings Items */
+.settingItem { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); padding: var(--space-md) 0; border-bottom: 1px solid var(--border-subtle); }
+.settingItem:last-child { border-bottom: none; }
+.settingItem h4 { font-size: var(--font-size-sm); font-weight: 600; margin-bottom: 2px; }
+.settingItem p { font-size: var(--font-size-xs); color: var(--text-tertiary); }
+
+/* Switch */
+.switch { position: relative; display: inline-block; width: 44px; height: 24px; flex-shrink: 0; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; inset: 0; background: var(--bg-glass); border: 1px solid var(--border-default); border-radius: var(--radius-pill); transition: all var(--transition-base); }
+.slider::before { content: ''; position: absolute; height: 18px; width: 18px; left: 2px; bottom: 2px; background: var(--text-secondary); border-radius: 50%; transition: all var(--transition-base); }
+.switch input:checked + .slider { background: var(--primary); border-color: var(--primary); }
+.switch input:checked + .slider::before { transform: translateX(20px); background: white; }
+
+/* Danger Zone */
+.dangerZone { border-color: rgba(225,112,85,0.2); }
+.dangerZone h2 { color: var(--error); }
+.dangerBtn { color: var(--error) !important; border: 1px solid rgba(225,112,85,0.3) !important; }
+.dangerBtn:hover { background: var(--error-bg) !important; }
+
+@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr; }
+  .tabList { flex-direction: row; overflow-x: auto; position: relative; top: 0; }
+  .formRow { grid-template-columns: 1fr; }
+}

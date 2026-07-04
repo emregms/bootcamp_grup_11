@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Bootcamp Proje 2026
 
-## Getting Started
+Modern ve interaktif bir **Eğitim, Mentorluk ve Eşleşme** platformu. Next.js 16'nın sunduğu App Router yapısıyla geliştirilmiş olan bu proje; öğrencilerin mentorlarla eşleştiği, derslere katıldığı, test çözüp sertifika alabildiği kapsamlı bir ekosistem sunar.
 
-First, run the development server:
+## ✨ Öne Çıkan Özellikler
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **🧑‍🏫 Mentor & Öğrenci Eşleşmesi:** Akıllı algoritmalarla (veya platform üzerinden) size en uygun mentorla eşleşme sistemi.
+- **📚 Eğitim ve Dersler (Lessons):** Video ve içerik destekli yapılandırılmış eğitim modülleri.
+- **📝 Sınavlar ve Quizler:** Öğrendiklerinizi pekiştirmeniz ve değerlendirmeniz için anlık sınav (quiz) sistemi.
+- **💬 Gerçek Zamanlı Sohbet (Chat):** Öğrenci ve mentor arasında kesintisiz iletişim.
+- **📜 Sertifikasyon:** Kursu ve testleri başarıyla tamamlayanlara özel dijital sertifikalar.
+- **💳 Ödeme Sistemi Entegrasyonu:** Güvenli ve kolay ödeme (Payment) altyapısı.
+- **📈 Kapsamlı Dashboard:** Kullanıcıların ilerlemelerini takip edebileceği kullanıcı paneli.
+- **⚙️ Profil & Ayarlar (Settings):** Tamamen özelleştirilebilir kullanıcı profilleri.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Kullanılan Teknolojiler
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **[Next.js 16](https://nextjs.org/):** React tabanlı güçlü ve performanslı modern web framework'ü.
+- **[React 19](https://react.dev/):** Yeni nesil bileşen (component) mimarisi.
+- **[Framer Motion](https://www.framer.com/motion/):** Akıcı, etkileşimli ve modern arayüz animasyonları.
+- **[Lucide React](https://lucide.dev/):** Hafif ve ölçeklenebilir ikon kütüphanesi.
+- **CSS Modules & Vanilla CSS:** Bileşen bazlı (component-scoped) stil mimarisi.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Proje Yapısı
 
-## Learn More
+\`\`\`bash
+src/
+├── app/                  # Next.js App Router (Sayfalar ve Layout)
+│   ├── auth/             # Giriş ve Kayıt (Login/Register)
+│   ├── certificates/     # Sertifika görüntüleme ve yönetimi
+│   ├── chat/             # Sohbet ve mesajlaşma arayüzü
+│   ├── dashboard/        # Kullanıcı paneli
+│   ├── explore/          # Yeni eğitimler ve mentorlar keşfetme
+│   ├── lesson/           # Ders içerikleri ve videoları
+│   ├── match/            # Eşleşme sistemi ekranları
+│   ├── mentor/           # Mentor profilleri ve listesi
+│   ├── payment/          # Ödeme adımları
+│   ├── quiz/             # Testler ve sınavlar
+│   └── settings/         # Kullanıcı hesap ayarları
+├── components/           # Tekrar kullanılabilir (reusable) UI bileşenleri
+└── data/                 # Mock veri, sabit değişkenler vb.
+\`\`\`
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Kurulum & Çalıştırma
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Projeyi yerel ortamınızda (local) çalıştırmak için aşağıdaki adımları izleyin:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Projeyi Klonlayın:**
+   \`\`\`bash
+   git clone https://github.com/emregms/bootcamp_grup_11.git
+   cd bootcamp_grup_11
+   \`\`\`
 
-## Deploy on Vercel
+2. **Bağımlılıkları Yükleyin:**
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Geliştirme Sunucusunu Başlatın:**
+   \`\`\`bash
+   npm run dev
+   \`\`\`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Tarayıcıda Görüntüleyin:**
+   [http://localhost:3000](http://localhost:3000) adresine giderek platformu deneyimleyebilirsiniz.
+
+## 🤝 Katkıda Bulunma (Contributing)
+
+Bu bir Bootcamp proje repodur. Geliştirmeler \`main\` branch'i üzerinden veya ilgili özellik branch'lerinden (feature branches) yapılmaktadır. Katkıda bulunmak için Pull Request oluşturabilirsiniz.
+
+---
+*Bu proje Bootcamp Grup 11 ekibi tarafından tasarlanmış ve geliştirilmektedir.*

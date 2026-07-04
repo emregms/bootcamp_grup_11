@@ -23,15 +23,15 @@ Modern ve interaktif bir **Eğitim, Mentorluk ve Eşleşme** platformu. Next.js 
 
 ## 📸 Ekran Görüntüleri
 
-Buraya projenin temel sayfalarından ekran görüntüleri ekleyebilirsiniz. Görselleri projedeki `public/` klasörüne ekleyip aşağıdaki yolları güncelleyebilirsiniz:
+Aşağıda projenin temel sayfalarından ekran görüntülerini bulabilirsiniz:
 
 | Ana Sayfa | Kullanıcı Paneli (Dashboard) |
 | :---: | :---: |
-| ![Ana Sayfa](https://via.placeholder.com/600x400?text=Ana+Sayfa+Ekrani) | ![Dashboard](https://via.placeholder.com/600x400?text=Dashboard+Ekrani) |
+| ![Ana Sayfa](public/home.png) | ![Dashboard](public/dashboard.png) |
 
-| Eğitimler (Lessons) | Mentorlar (Explore) |
+| Keşfet (Explore) | Mentor (Mentor) |
 | :---: | :---: |
-| ![Eğitimler](https://via.placeholder.com/600x400?text=Egitimler+Ekrani) | ![Mentorlar](https://via.placeholder.com/600x400?text=Mentorlar+Ekrani) |
+| ![Keşfet](public/explore.png) | ![Mentor](public/mentor.png) |
 
 ## 📂 Proje Yapısı
 

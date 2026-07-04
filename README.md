@@ -23,23 +23,22 @@ Modern ve interaktif bir **Eğitim, Mentorluk ve Eşleşme** platformu. Next.js 
 
 ## 📂 Proje Yapısı
 
-\`\`\`bash
-src/
-├── app/                  # Next.js App Router (Sayfalar ve Layout)
-│   ├── auth/             # Giriş ve Kayıt (Login/Register)
-│   ├── certificates/     # Sertifika görüntüleme ve yönetimi
-│   ├── chat/             # Sohbet ve mesajlaşma arayüzü
-│   ├── dashboard/        # Kullanıcı paneli
-│   ├── explore/          # Yeni eğitimler ve mentorlar keşfetme
-│   ├── lesson/           # Ders içerikleri ve videoları
-│   ├── match/            # Eşleşme sistemi ekranları
-│   ├── mentor/           # Mentor profilleri ve listesi
-│   ├── payment/          # Ödeme adımları
-│   ├── quiz/             # Testler ve sınavlar
-│   └── settings/         # Kullanıcı hesap ayarları
-├── components/           # Tekrar kullanılabilir (reusable) UI bileşenleri
-└── data/                 # Mock veri, sabit değişkenler vb.
-\`\`\`
+| Klasör / Dosya | Açıklama |
+| :--- | :--- |
+| **`src/app/`** | Next.js App Router (Ana sayfalar ve Layout) |
+| ├── `auth/` | Giriş ve Kayıt (Login/Register) |
+| ├── `certificates/` | Sertifika görüntüleme ve yönetimi |
+| ├── `chat/` | Sohbet ve mesajlaşma arayüzü |
+| ├── `dashboard/` | Kullanıcı paneli |
+| ├── `explore/` | Yeni eğitimler ve mentorlar keşfetme |
+| ├── `lesson/` | Ders içerikleri ve videoları |
+| ├── `match/` | Eşleşme sistemi ekranları |
+| ├── `mentor/` | Mentor profilleri ve listesi |
+| ├── `payment/` | Ödeme adımları |
+| ├── `quiz/` | Testler ve sınavlar |
+| └── `settings/` | Kullanıcı hesap ayarları |
+| **`src/components/`** | Tekrar kullanılabilir (reusable) UI bileşenleri |
+| **`src/data/`** | Mock veriler, sabit değişkenler vb. |
 
 ## 🚀 Kurulum & Çalıştırma
 

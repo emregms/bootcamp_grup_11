@@ -57,8 +57,10 @@
     - *Gündem:* Ekip kapasitesinin değerlendirilmesi, görev dağılımının yapılması ve genel gelişim planının oluşturulması.
     - *Özet & Kararlar:* Ekip içi görev dağılımı gerçekleştirildi ve projenin genel ilerleme planı oluşturulmaya başlandı.
 - **Sprint board update**: Sprint 1 süresince güncellenen Trello panosuna [Trello Backlog Board](https://trello.com/b/61xmZye8) adresi üzerinden ulaşılabilir.
+  
+  ![Sprint 1 Backlog Board](ProjectManagement/Sprint1Documents/backlog1.jpeg)
 - **Ürün Durumu**: Projenin geliştirilmekte olan mevcut Next.js arayüzünün ekran görüntüleri alt kısımda paylaşılmıştır.
-- **Sprint Review**: İlk prototip aşaması ve teknik fizibilite çalışmaları değerlendirilmiştir. Yapay zeka ve video konferans entegrasyonları için gerekli teknik altyapı araştırması tamamlanmıştır.
+- **Sprint Review**: İlk prototip aşaması ve teknik fizibilite çalışmaları değerlendirilmiştir. Yapay zeka ve video konferans entegrasyonları için gerekli teknik altyapı araştırması tamamlanmıştır. Ayrıca Sprint 1 kapsamında tasarlanan temel veritabanı tabloları [Veritabanı Şeması (SQL)](ProjectManagement/Sprint1Documents/database_schema.sql) dosyasına eklenmiştir.
 - **Sprint Retrospective**: Ekip içindeki görev dağılımının verimliliği artırdığı gözlemlenmiştir. İlerleyen süreçlerde sprint planlama toplantılarına katılımın ve zaman yönetiminin sürdürülmesi kararlaştırılmıştır.
 
 ---

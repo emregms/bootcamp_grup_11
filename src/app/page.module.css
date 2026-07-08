@@ -441,7 +441,24 @@
   transform: translateX(0);
 }
 
+.categoryImageWrap {
+  position: relative;
+  width: 100%;
+  height: 88px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--space-xs);
+}
+
+.categoryImage {
+  object-fit: cover;
+  opacity: 0.45;
+}
+
 .categoryIcon {
+  position: absolute;
+  inset: 0;
+  margin: auto;
   width: 56px;
   height: 56px;
   border-radius: var(--radius-lg);
@@ -449,7 +466,7 @@
   align-items: center;
   justify-content: center;
   font-size: 28px;
-  margin-bottom: var(--space-xs);
+  backdrop-filter: blur(4px);
 }
 
 .categoryCard h4 {

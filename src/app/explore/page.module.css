@@ -141,4 +141,20 @@
   .mobileFilterBtn { display: flex; }
   .mentorGrid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 768px) { .mentorGrid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .mentorGrid { grid-template-columns: 1fr; } .lessonGrid { grid-template-columns: 1fr; } }
+
+.lessonsSection { margin-bottom: var(--space-2xl); }
+.sectionTitle { font-size: var(--font-size-xl); margin-bottom: var(--space-lg); }
+.lessonGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); margin-bottom: var(--space-xl); }
+.lessonCard {
+  display: flex; flex-direction: column;
+  background: var(--bg-card); border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl); overflow: hidden; text-decoration: none;
+  transition: all var(--transition-base);
+}
+.lessonCard:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--border-default); }
+.lessonBody { padding: var(--space-md); display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.lessonBody h3 { font-size: var(--font-size-base); font-weight: 700; }
+.lessonBody p { font-size: var(--font-size-xs); color: var(--text-secondary); line-height: 1.4; }
+.lessonMeta { display: flex; flex-wrap: wrap; gap: 8px; font-size: var(--font-size-xs); color: var(--text-tertiary); margin-top: auto; }
+@media (max-width: 1024px) { .lessonGrid { grid-template-columns: repeat(2, 1fr); } }

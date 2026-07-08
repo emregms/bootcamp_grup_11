@@ -1,0 +1,25 @@
+.wrapper {
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fallback {
+  color: white;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.lg.fallback { font-size: 1.25rem; }
+.xl.fallback { font-size: 2rem; }
+
+.sm { font-size: 0.7rem; }

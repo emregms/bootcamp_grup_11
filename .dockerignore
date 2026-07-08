@@ -1,0 +1,37 @@
+# Dependencies
+node_modules
+npm-debug.log*
+
+# Build
+.next
+out
+dist
+*.tsbuildinfo
+
+# Git & IDE
+.git
+.gitignore
+.cursor
+.vscode
+.idea
+
+# Env (Coolify panelinden enjekte edilir)
+.env
+.env.*
+!.env.production.example
+
+# Docs & test
+docs
+README.md
+take-screenshots.js
+supabase/.temp
+supabase/.branches
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Agent / misc
+agent-transcripts
+CLAUDE.md
+AGENTS.md

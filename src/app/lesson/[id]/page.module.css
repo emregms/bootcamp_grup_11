@@ -1,4 +1,5 @@
 .page { padding: var(--space-2xl) 0 var(--space-4xl); }
+.heroCover { margin-bottom: var(--space-lg); }
 .grid { display: grid; grid-template-columns: 1fr 380px; gap: var(--space-2xl); align-items: start; }
 
 .breadcrumb { font-size: var(--font-size-sm); color: var(--text-tertiary); margin-bottom: var(--space-md); }

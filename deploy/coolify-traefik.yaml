@@ -1,0 +1,18 @@
+# Coolify → Traefik dynamic config (SkillBridge)
+# Container name Coolify'da: skillbridge
+# Domain: skillbridge.hegg.tr
+
+http:
+  routers:
+    skillbridge-router:
+      entryPoints:
+        - http
+        - https
+      rule: Host(`skillbridge.hegg.tr`)
+      service: skillbridge-service
+      priority: 250
+  services:
+    skillbridge-service:
+      loadBalancer:
+        servers:
+          - url: 'http://skillbridge:3000'

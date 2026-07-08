@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import { resolveAvatar } from '@/lib/stock-images';
 import styles from './AvatarImage.module.css';
@@ -27,8 +28,9 @@ export default function AvatarImage({
 }: AvatarImageProps) {
   const px = sizeMap[size];
   const resolved = resolveAvatar(src, stockIndex);
+  const [failed, setFailed] = useState(false);
 
-  if (resolved) {
+  if (resolved && !failed) {
     return (
       <div
         className={`${styles.wrapper} ${styles[size]} ${className}`}
@@ -41,6 +43,7 @@ export default function AvatarImage({
           height={px}
           className={styles.img}
           unoptimized
+          onError={() => setFailed(true)}
         />
       </div>
     );

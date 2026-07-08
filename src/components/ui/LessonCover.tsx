@@ -1,7 +1,8 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
-import { resolveLessonCover } from '@/lib/stock-images';
+import { resolveLessonCover, getCategoryStockImage } from '@/lib/stock-images';
 import styles from './LessonCover.module.css';
 
 interface LessonCoverProps {
@@ -19,7 +20,8 @@ export default function LessonCover({
   height = 180,
   className = '',
 }: LessonCoverProps) {
-  const imageUrl = resolveLessonCover(src, category);
+  const primary = resolveLessonCover(src, category);
+  const [imageUrl, setImageUrl] = useState(primary);
 
   return (
     <div className={`${styles.cover} ${className}`} style={{ height }}>
@@ -30,6 +32,7 @@ export default function LessonCover({
         className={styles.img}
         sizes="(max-width: 768px) 100vw, 400px"
         unoptimized
+        onError={() => setImageUrl(getCategoryStockImage(category))}
       />
       <div className={styles.overlay} />
       <span className={styles.category}>{category}</span>

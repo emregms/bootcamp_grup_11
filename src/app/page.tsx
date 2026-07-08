@@ -14,7 +14,7 @@ import { mentors, categories, testimonials, platformStats } from '@/data/mock';
 import { apiGet } from '@/lib/api/client';
 import type { Mentor, Category, PlatformStats } from '@/types/models';
 import AvatarImage from '@/components/ui/AvatarImage';
-import Image from 'next/image';
+import CategoryImage from '@/components/ui/CategoryImage';
 import { getCategoryStockImage } from '@/lib/stock-images';
 import styles from './page.module.css';
 
@@ -271,13 +271,7 @@ export default function HomePage() {
               <motion.div key={cat.id} variants={scaleIn}>
                 <Link href={`/explore?category=${cat.id}`} className={styles.categoryCard}>
                   <div className={styles.categoryImageWrap}>
-                    <Image
-                      src={cat.imageUrl || getCategoryStockImage(cat.name)}
-                      alt={cat.name}
-                      fill
-                      className={styles.categoryImage}
-                      unoptimized
-                    />
+                    <CategoryImage name={cat.name} imageUrl={getCategoryStockImage(cat.name)} />
                     <div className={styles.categoryIcon} style={{ background: `${cat.color}15` }}>
                       <span>{cat.icon}</span>
                     </div>

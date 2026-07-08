@@ -12,17 +12,16 @@ UPDATE public.categories SET image_url = CASE name
   WHEN 'Tasarım & UX' THEN 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80'
   WHEN 'Veri Bilimi & AI' THEN 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80'
   WHEN 'Dijital Pazarlama' THEN 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'
-  WHEN 'Müzik & Ses' THEN 'https://images.unsplash.com/photo-1511379938543-c1f69419868d?auto=format&fit=crop&w=800&q=80'
-  WHEN 'Fotoğrafçılık' THEN 'https://images.unsplash.com/photo-1452587925148-ce544e77e70e?auto=format&fit=crop&w=800&q=80'
-  WHEN 'Dil Eğitimi' THEN 'https://images.unsplash.com/photo-1546410531-bb4ca7796e27?auto=format&fit=crop&w=800&q=80'
+  WHEN 'Müzik & Ses' THEN 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80'
+  WHEN 'Fotoğrafçılık' THEN 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80'
+  WHEN 'Dil Eğitimi' THEN 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80'
   WHEN 'İş & Finans' THEN 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80'
   WHEN 'Kişisel Gelişim' THEN 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80'
-  WHEN 'Spor & Sağlık' THEN 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50e?auto=format&fit=crop&w=800&q=80'
+  WHEN 'Spor & Sağlık' THEN 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80'
   WHEN 'Yemek & Mutfak' THEN 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80'
-  WHEN 'El Sanatları' THEN 'https://images.unsplash.com/photo-1452860600638-524486df92f5?auto=format&fit=crop&w=800&q=80'
+  WHEN 'El Sanatları' THEN 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=800&q=80'
   ELSE image_url
-END
-WHERE image_url IS NULL;
+END;
 
 -- Storage bucket'ları
 INSERT INTO storage.buckets (id, name, public, file_size_limit, allowed_mime_types)

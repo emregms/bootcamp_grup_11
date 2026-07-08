@@ -221,7 +221,7 @@ export function mapCategory(cat: DbCategory, mentorCount = 0): Category {
     icon: cat.icon,
     color: cat.color,
     count: mentorCount,
-    imageUrl: cat.image_url ?? getCategoryStockImage(cat.name),
+    imageUrl: getCategoryStockImage(cat.name),
   };
 }
 

@@ -19,6 +19,7 @@ export default function ChatbotWidget() {
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  const [aiSource, setAiSource] = useState<'gemini' | 'fallback' | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -42,7 +43,13 @@ export default function ChatbotWidget() {
         content: m.text,
       }));
 
-      const { reply } = await apiPost('/api/ai/chat', { messages: history }) as { reply: string };
+      const data = await apiPost('/api/ai/chat', { messages: history }) as {
+        reply?: string;
+        poweredBy?: 'gemini' | 'fallback';
+      };
+      const reply = data.reply?.trim()
+        || 'Yanıt oluşturulamadı. Takas, mentor veya demo giriş hakkında sorabilirsiniz.';
+      if (data.poweredBy) setAiSource(data.poweredBy);
       setMessages((prev) => [...prev, { id: Date.now() + 1, type: 'bot', text: reply }]);
     } catch {
       setMessages((prev) => [...prev, {
@@ -100,7 +107,7 @@ export default function ChatbotWidget() {
                   <h4>AI Asistan</h4>
                   <span className={styles.status}>
                     <span className={styles.statusDot} />
-                    Gemini · Çevrimiçi
+                    {aiSource === 'fallback' ? 'Demo mod · Çevrimiçi' : 'Gemini · Çevrimiçi'}
                   </span>
                 </div>
               </div>

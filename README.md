@@ -61,6 +61,8 @@
   ![Sprint 1 Backlog Board](ProjectManagement/Sprint1Documents/backlog1.jpeg)
 - **Ürün Durumu**: Projenin geliştirilmekte olan mevcut Next.js arayüzünün ekran görüntüleri alt kısımda paylaşılmıştır.
 - **Sprint Review**: İlk prototip aşaması ve teknik fizibilite çalışmaları değerlendirilmiştir. Yapay zeka ve video konferans entegrasyonları için gerekli teknik altyapı araştırması tamamlanmıştır. Ayrıca Sprint 1 kapsamında tasarlanan temel veritabanı tabloları [Veritabanı Şeması (SQL)](ProjectManagement/Sprint1Documents/database_schema.sql) dosyasına eklenmiştir.
+
+  ![Supabase Veritabanı Şeması](ProjectManagement/Sprint1Documents/database_schema_supabase.jpeg)
 - **Sprint Retrospective**: Ekip içindeki görev dağılımının verimliliği artırdığı gözlemlenmiştir. İlerleyen süreçlerde sprint planlama toplantılarına katılımın ve zaman yönetiminin sürdürülmesi kararlaştırılmıştır.
 
 ---

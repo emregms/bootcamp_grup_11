@@ -37,10 +37,15 @@ export const appConfig = {
 } as const;
 
 export function getGeminiModel(): string {
-  return process.env.GEMINI_MODEL || 'gemini-2.0-flash';
+  return process.env.GEMINI_MODEL || 'gemini-2.0-flash-lite';
 }
 
 export function isGeminiConfigured(): boolean {
   const key = process.env.GEMINI_API_KEY;
   return Boolean(key && !key.includes('your-') && key !== '');
+}
+
+/** true ise Gemini API çağrılmaz — yarışma/demo için anında yanıt */
+export function isGeminiFallbackForced(): boolean {
+  return process.env.GEMINI_USE_FALLBACK === 'true';
 }

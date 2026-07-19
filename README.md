@@ -68,23 +68,18 @@
 ---
 
 # Sprint 2
-Backlog düzeni ve Story seçimleri: Projenin ikinci faz hedeflerine, canlı ortam (production) geçişine ve AI entegrasyon MVP gereksinimlerine göre backlog yeniden düzenlenmiştir. Trello board üzerinde işler (User Story & Task) yapay zeka eşleşme algoritmaları, gerçek zamanlı iletişim ve canlı test süreçlerine göre önceliklendirilmiş ve puanlandırılmıştır.
 
-Daily Scrum: Sprint 2 boyunca gerçekleştirilen toplantı notları ve alınan kararlar detaylı olarak Sprint 2 Günlük Scrum Toplantı Notları dosyasında belgelenmiştir. Toplantıların kısa özeti aşağıdadır:
+* **Backlog düzeni ve Story seçimleri**: Projenin ikinci faz hedeflerine, canlı ortam (production) geçişine ve AI entegrasyon MVP gereksinimlerine göre backlog yeniden düzenlenmiştir. Trello board üzerinde işler (User Story & Task) yapay zeka eşleşme algoritmaları, gerçek zamanlı iletişim ve canlı test süreçlerine göre önceliklendirilmiş ve puanlandırılmıştır.
 
-7 Temmuz | Sprint 1 Değerlendirmesi ve Ortak Veritabanı Yapılandırma Toplantısı (50 Dakika)
+* **Daily Scrum**: Sprint 2 boyunca gerçekleştirilen toplantı notları ve alınan kararlar detaylı olarak [Sprint 2 Günlük Scrum Toplantı Notları](ProjectManagement/Sprint2Documents/DailyScrumMeetingNotesSprint2.md) dosyasında belgelenmiştir. Toplantıların kısa özeti aşağıdadır:
+    * **7 Temmuz | Sprint 1 Değerlendirmesi ve Ortak Veritabanı Yapılandırma Toplantısı (50 Dakika)**
+        * *Gündem:* Geçmiş sprint çıktılarının gözden geçirilmesi, Supabase üzerinde ortak çalışma alanlarının kurulması ve ekip içi erişim yetkilerinin senkronizasyonu.
+        * *Özet & Kararlar:* Sprint 1 hedeflerinin başarıyla tamamlandığı teyit edildi. Supabase üzerinde tüm ekibin ortak çalışabileceği organizasyon hesabı aktif edildi ve API anahtarları frontend ekibine güvenli şekilde aktarıldı. `users`, `skills`, `sessions` ve `transactions` tablolarından oluşan veri tabanı mimarisi doğrulandı. Yeni kayıt olan kullanıcılara otomatik 100 hoş geldin kredisi tanımlayan PostgreSQL tetikleyicisi (Trigger) ile satır bazlı güvenlik duvarı (RLS) başarıyla test edildi. Master `skills` tablosuna 12 temel kategoride test verisi basılarak frontend ekibinin arama/filtreleme testleri yapması sağlandı. Ayrıca projenin kurumsal kimlik ve isim değişikliği süreci resmen başlatıldı.
+    * **14 Temmuz | Canlı Ortam (Production) Testleri ve Yapay Zeka Entegrasyon Toplantısı (60 Dakika)**
+        * *Gündem:* Projenin canlıya (Production) taşınması, hazır hale gelen örnek kullanıcı panelinin (Dashboard) deneyimlenmesi ve temel düzey AI Chat modülünün aktifleştirilmesi.
+        * *Özet & Kararlar:* Platform başarıyla canlı test ortamına (Vercel & Supabase Production) taşındı ve tüm ekibin internet üzerinden erişimine açıldı. Hazırlanan örnek kullanıcı paneli (Dashboard) uçtan uca test edilerek UI/UX revizyon listesi çıkarıldı. Vercel AI SDK ve OpenAI (`gpt-4o-mini`) entegrasyonu tamamlanarak platformun en kritik özelliklerinden biri olan temel düzey yapay zeka destekli sohbet (AI Chatbot) mekanizması başarıyla aktif edildi. Bir sonraki aşamada `pgvector` tabanlı akıllı mentor eşleşmelerine ve `Supabase Realtime` mesajlaşma odalarına odaklanılması kararlaştırıldı.
 
-Gündem: Geçmiş sprint çıktılarının gözden geçirilmesi, Supabase üzerinde ortak çalışma alanlarının kurulması ve ekip içi erişim yetkilerinin senkronizasyonu.
-
-Özet & Kararlar: Sprint 1 hedeflerinin başarıyla tamamlandığı teyit edildi. Supabase üzerinde tüm ekibin ortak çalışabileceği organizasyon hesabı aktif edildi ve API anahtarları frontend ekibine güvenli şekilde aktarıldı. users, skills, sessions ve transactions tablolarından oluşan veri tabanı mimarisi doğrulandı. Yeni kayıt olan kullanıcılara otomatik 100 hoş geldin kredisi tanımlayan PostgreSQL tetikleyicisi (Trigger) ile satır bazlı güvenlik duvarı (RLS) başarıyla test edildi. Master skills tablosuna 12 temel kategoride test verisi basılarak frontend ekibinin arama/filtreleme testleri yapması sağlandı. Ayrıca projenin kurumsal kimlik ve isim değişikliği süreci resmen başlatıldı.
-
-14 Temmuz | Canlı Ortam (Production) Testleri ve Yapay Zeka Entegrasyon Toplantısı (60 Dakika)
-
-Gündem: Projenin canlıya (Production) taşınması, hazır hale gelen örnek kullanıcı panelinin (Dashboard) deneyimlenmesi ve temel düzey AI Chat modülünün aktifleştirilmesi.
-
-Özet & Kararlar: Platform başarıyla canlı test ortamına (Vercel & Supabase Production) taşındı ve tüm ekibin internet üzerinden erişimine açıldı. Hazırlanan örnek kullanıcı paneli (Dashboard) uçtan uca test edilerek UI/UX revizyon listesi çıkarıldı. Vercel AI SDK ve OpenAI (gpt-4o-mini) entegrasyonu tamamlanarak platformun en kritik özelliklerinden biri olan temel düzey yapay zeka destekli sohbet (AI Chatbot) mekanizması başarıyla aktif edildi. Bir sonraki aşamada pgvector tabanlı akıllı mentor eşleşmelerine ve Supabase Realtime mesajlaşma odalarına odaklanılması kararlaştırıldı.
-
-Sprint board update: Sprint 2 süresince güncellenene Trello panosuna Trello Backlog Board adresi üzerinden ulaşılabilir.
+* **Sprint board update**: Sprint 2 süresince güncellenen Trello panosuna [Trello Backlog Board](https://trello.com/b/61xmZye8) adresi üzerinden ulaşılabilir.
 
 ## 📸 Ekran Görüntüleri
 

@@ -91,6 +91,8 @@
 | :---: | :---: |
 | ![Keşfet](public/explore.png) | ![Mentor](public/mentor.png) |
 
+<img width="1918" height="972" alt="image" src="https://github.com/user-attachments/assets/cee87ade-c7f9-42c0-9265-dcf9d503052c" />
+
 ---
 
 ## 🛠️ Kullanılan Teknolojiler

@@ -7,7 +7,7 @@ import Link from 'next/link';
 import {
   ArrowRight, Zap, Users, Award, BookOpen, Repeat,
   Star, ChevronRight, Play, Shield, Clock, TrendingUp,
-  CheckCircle2, Sparkles, Globe,
+  CheckCircle2, Sparkles, Globe, Radio,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { mentors, categories, testimonials, platformStats } from '@/data/mock';
@@ -81,7 +81,6 @@ export default function HomePage() {
       .then((data) => {
         const res = data as { featuredMentors?: Mentor[]; categories?: Category[]; stats?: PlatformStats };
         if (res.featuredMentors?.length) setFeaturedMentors(res.featuredMentors);
-        if (res.categories?.length) setCategoryList(res.categories);
         if (res.stats) setStats(res.stats);
       })
       .catch(() => {});
@@ -140,7 +139,7 @@ export default function HomePage() {
                 ))}
               </div>
               <p>
-                <strong>15.000+</strong> kullanıcı aktif olarak beceri takası yapıyor
+                <strong>340+</strong> kullanıcı aktif olarak beceri takası yapıyor
               </p>
             </motion.div>
           </motion.div>
@@ -213,6 +212,16 @@ export default function HomePage() {
           <StatCounter value={String(stats.averageRating || 4.8)} label="Ortalama Puan" icon={Star} />
         </div>
       </AnimatedSection>
+
+      {/* Live Activity Banner */}
+      <div className={styles.liveBanner}>
+        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+          <Radio size={14} style={{ color: 'var(--success)', animation: 'pulse-ring 2s ease-out infinite' }} />
+          <span style={{ fontSize: 'var(--font-size-sm)', color: 'var(--text-secondary)' }}>
+            <strong style={{ color: 'var(--text-primary)' }}>42</strong> aktif ders şu an devam ediyor · Son 1 saatte <strong style={{ color: 'var(--text-primary)' }}>5</strong> yeni mentor katıldı · <strong style={{ color: 'var(--text-primary)' }}>56</strong> kişi çevrimiçi
+          </span>
+        </div>
+      </div>
 
       <AnimatedSection className={`section ${styles.howSection}`} id="how-it-works">
         <div className="container">

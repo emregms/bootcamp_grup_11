@@ -8,6 +8,7 @@ import {
   Coins, BookOpen, Award, TrendingUp, Calendar, Clock,
   ArrowUpRight, ArrowDownLeft, Star, MessageSquare,
   ChevronRight, Repeat, Sparkles, Video, Gift, Zap, Loader2,
+  Radio,
 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { apiGet } from '@/lib/api/client';
@@ -19,6 +20,7 @@ import {
   creditHistory as mockCredits,
   upcomingLessons as mockLessons,
   matchSuggestions as mockMatches,
+  liveActivity,
 } from '@/data/mock';
 import styles from './page.module.css';
 
@@ -75,13 +77,29 @@ export default function DashboardPage() {
             <p>İşte platform aktivitelerinin özeti</p>
           </motion.div>
           <motion.div className={styles.welcomeActions} variants={fadeUp}>
-            <Link href="/match" className="btn btn-gradient">
-              <Sparkles size={16} /> Eşleşme Bul
-            </Link>
+            <div className={styles.matchBtnWrap}>
+              <Link href="/match" className="btn btn-gradient">
+                <Sparkles size={16} /> Eşleşme Bul
+              </Link>
+              <span className={styles.newBadge}>3 yeni</span>
+            </div>
             <Link href="/explore" className="btn btn-secondary">
               Mentorları Keşfet
             </Link>
           </motion.div>
+        </motion.div>
+
+        {/* Live Activity Banner */}
+        <motion.div
+          className={styles.liveBanner}
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          <Radio size={14} className={styles.liveDot} />
+          <span className={styles.liveBannerText}>
+            <strong>42</strong> aktif ders şu an devam ediyor · Son 1 saatte <strong>5</strong> yeni eşleşme · <strong>56</strong> kişi çevrimiçi
+          </span>
         </motion.div>
 
         <motion.div className={styles.statsGrid} initial="hidden" animate="visible" variants={stagger}>

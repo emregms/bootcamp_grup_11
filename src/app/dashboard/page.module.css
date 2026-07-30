@@ -107,8 +107,60 @@
 .quickAction:hover { border-color: var(--border-default); background: var(--bg-glass-hover); color: var(--text-primary); }
 .quickIcon { width: 44px; height: 44px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; }
 
+/* Live Banner */
+.liveBanner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 12px 20px;
+  background: var(--gradient-hero-subtle);
+  border: 1px solid rgba(108, 92, 231, 0.15);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-2xl);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  overflow: hidden;
+}
+
+.liveDot {
+  color: var(--success);
+  flex-shrink: 0;
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+.liveBannerText strong {
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* New badge on match button */
+.matchBtnWrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.newBadge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--error);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  line-height: 1.2;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 8px rgba(225, 112, 85, 0.5);
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
 @media (max-width: 1024px) {
   .statsGrid { grid-template-columns: repeat(2, 1fr); }
   .mainGrid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .liveBanner { font-size: var(--font-size-xs); padding: 10px 14px; }
 }
 @media (max-width: 480px) { .statsGrid { grid-template-columns: 1fr; } }

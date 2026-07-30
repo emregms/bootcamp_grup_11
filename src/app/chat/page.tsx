@@ -72,7 +72,7 @@ export default function ChatPage() {
   }, [activeChat]);
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    messagesEndRef.current?.scrollIntoView({ block: 'nearest' });
   }, [messages]);
 
   const handleSend = async () => {

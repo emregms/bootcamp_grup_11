@@ -294,6 +294,14 @@
 /* ═══════════════════════════════════════════════════════
    STATS SECTION
    ═══════════════════════════════════════════════════════ */
+/* Live Activity Banner */
+.liveBanner {
+  padding: var(--space-md) 0;
+  background: var(--gradient-hero-subtle);
+  border-top: 1px solid rgba(108, 92, 231, 0.1);
+  border-bottom: 1px solid rgba(108, 92, 231, 0.1);
+}
+
 .statsSection {
   padding: var(--space-3xl) 0;
   border-bottom: 1px solid var(--border-subtle);

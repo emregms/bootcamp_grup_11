@@ -46,7 +46,7 @@ export default function ExplorePage() {
       const categoriesData = categoriesRes as { categories?: Category[] };
       setMentors(mentorsData.mentors || (mockMentors as unknown as Mentor[]));
       setLessons(lessonsData.lessons || (mockLessons as unknown as Lesson[]));
-      setCategories(categoriesData.categories || (mockCategories as unknown as Category[]));
+      setCategories(mockCategories as unknown as Category[]);
     }).finally(() => setLoading(false));
   }, []);
 

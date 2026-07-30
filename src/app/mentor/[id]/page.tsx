@@ -101,9 +101,15 @@ export default function MentorProfilePage({ params }: MentorProfilePageProps) {
               <Link href="/chat" className="btn btn-gradient w-full">
                 <MessageSquare size={16} /> Mesaj Gönder
               </Link>
-              <Link href={`/lesson/${mentorLessons[0]?.id || ''}`} className="btn btn-secondary w-full">
-                <Calendar size={16} /> Ders Planla
-              </Link>
+              {mentorLessons.length > 0 ? (
+                <Link href={`/lesson/${mentorLessons[0].id}`} className="btn btn-secondary w-full">
+                  <Calendar size={16} /> Ders Planla
+                </Link>
+              ) : (
+                <Link href="/explore" className="btn btn-secondary w-full">
+                  <Calendar size={16} /> Dersleri Keşfet
+                </Link>
+              )}
             </div>
           </motion.div>
         </div>

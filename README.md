@@ -60,6 +60,9 @@
   - **30 Haziran | Kaynak Planlaması ve Yol Haritası (Roadmap) Toplantısı (30 Dakika)**
     - *Gündem:* Ekip kapasitesinin değerlendirilmesi, görev dağılımının yapılması ve genel gelişim planının oluşturulması.
     - *Özet & Kararlar:* Ekip içi görev dağılımı gerçekleştirildi ve projenin genel ilerleme planı oluşturulmaya başlandı.
+
+  ![Sprint 1 Toplantı Ekran Görüntüsü](ProjectManagement/Sprint1Documents/meeting_screenshot.png)
+
 - **Sprint board update**: Sprint 1 süresince güncellenen Trello panosuna [Trello Backlog Board](https://trello.com/b/61xmZye8) adresi üzerinden ulaşılabilir.
   
   ![Sprint 1 Backlog Board](ProjectManagement/Sprint1Documents/backlog1.jpeg)

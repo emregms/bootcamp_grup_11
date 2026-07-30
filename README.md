@@ -1,4 +1,8 @@
-# **Grup 11**
+<div align="center">
+  <img src="public/icon.png" alt="SkillBridge Logo" width="120"/>
+  <h1>Grup 11 - SkillBridge</h1>
+  <p>🚀 <strong>Canlı Önizleme:</strong> <a href="https://skillbridge.hegg.tr/">https://skillbridge.hegg.tr/</a></p>
+</div>
 
 # Ürün İle İlgili Bilgiler
 

@@ -81,7 +81,6 @@ export default function HomePage() {
       .then((data) => {
         const res = data as { featuredMentors?: Mentor[]; categories?: Category[]; stats?: PlatformStats };
         if (res.featuredMentors?.length) setFeaturedMentors(res.featuredMentors);
-        if (res.stats) setStats(res.stats);
       })
       .catch(() => {});
   }, []);

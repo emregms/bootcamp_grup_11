@@ -155,3 +155,19 @@ Projeyi yerel ortamınızda (local) çalıştırmak için aşağıdaki adımlar�
 
 4. **Tarayıcıda Görüntüleyin:**
    [http://localhost:3000](http://localhost:3000) adresine giderek platformu deneyimleyebilirsiniz.
+
+# Sprint 3
+
+* **Backlog düzeni ve Story seçimleri**: Projenin final fazında MVP ürünün eksikliklerinin giderilmesine, Auth mimarisindeki oturum hatalarının çözülmesine ve Yapay Zeka (ML) eşleşme algoritmalarının derinleştirilmesine odaklanılmıştır. Trello board üzerinde bu sprint için **toplam 35 Story Point (SP)** hedeflenmiş, sprint sonunda **30 Story Point'lik iş başarıyla tamamlanmıştır.**
+
+* **Daily Scrum**: Sprint 3 boyunca gerçekleştirilen toplantı notları ve alınan kararlar detaylı olarak [Sprint 3 Günlük Scrum Toplantı Notları](ProjectManagement/Sprint3Documents/DailyScrumMeetingNotesSprint3.md) dosyasında belgelenmiştir. Toplantıların kısa özeti aşağıdadır:
+
+    * **21 Temmuz | Sprint 2 Eksikleri ve Auth/Giriş Hata Analiz Toplantısı (55 Dakika)**
+        * *Gündem:* Kayıt olma sürecindeki veritabanı senkronizasyon hatasının (Kullanıcı veritabanına düşüyor ancak sisteme giriş yapılamıyor/oturum açılmıyor) incelenmesi, eksik kalan UI parçalarının tespiti ve sprint eforunun (Story Points) puanlanması.
+        * *Özet & Kararlar:* Supabase Auth SSR middleware katmanındaki oturum (session) çerezlerinin (cookies) tespiti yapıldı. Kayıt sonrasında `auth.users` ve `public.users` senkronizasyonunun başarılı olduğu fakat Next.js App Router tarafında login yönlendirmesinde yetkilendirme token'ının kaybolduğu saptandı. Bu kritik hatanın düzeltilmesi için acil task (5 SP) açıldı. Ayrıca genel ürün backlog'undaki kalan işler puanlanarak toplam 35 SP hedef belirlendi.
+    * **28 Temmuz | ML / Yapay Zeka Modeli Geliştirme ve Sertifikasyon Toplantısı (60 Dakika)**
+        * *Gündem:* Becerilere dayalı akıllı mentor eşleşmesi için ML/Yapay zeka altyapısının geliştirilmesi, otomatik PDF sertifika oluşturma modülü ve final testleri.
+        * *Özet & Kararlar:* OpenAI embedding modelleri ve Supabase `pgvector` eklentisi kullanılarak kullanıcı profil metinleri üzerinden vektörel benzerlik (Cosine Similarity) hesaplayan ML eşleşme algoritması geliştirildi. Mentor ve mentee ilgi alanları arasındaki anlamsal bağın %85 üzerinde doğrulukla kurulması sağlandı. Tamamlanan dersler sonrası otomatik üretilecek dijital sertifika altyapısı (`/certificates`) projeye dahil edildi.
+
+* **Sprint board update**: Sprint 3 süresince güncellenen Trello panosuna [Trello Backlog Board](https://trello.com/b/61xmZye8) adresi üzerinden ulaşılabilir.
+   

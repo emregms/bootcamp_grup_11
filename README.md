@@ -98,12 +98,40 @@
 | ![Keşfet](public/explore.png) | ![Mentor](public/mentor.png) |
 
  <img width="1918" height="972" alt="image" src="https://github.com/user-attachments/assets/cee87ade-c7f9-42c0-9265-dcf9d503052c" />
+
+---
+
+# Sprint 3
+
+* **Backlog düzeni ve Story seçimleri**: Projenin final fazında MVP ürünün eksikliklerinin giderilmesine, mock veriden Supabase API'ye geçişe, Auth mimarisindeki oturum hatalarının çözülmesine ve Yapay Zeka (ML) eşleşme algoritmalarının derinleştirilmesine odaklanılmıştır. Trello board üzerinde bu sprint için **toplam 35 Story Point (SP)** hedeflenmiş, sprint sonunda **30 Story Point'lik iş başarıyla tamamlanmıştır.**
+
+* **Daily Scrum**: Sprint 3 boyunca gerçekleştirilen toplantı notları ve alınan kararlar detaylı olarak [Sprint 3 Günlük Scrum Toplantı Notları](ProjectManagement/Sprint3Documents/DailyScrumMeetingNotesSprint3.md) dosyasında belgelenmiştir. Toplantıların kısa özeti aşağıdadır:
+    * **21 Temmuz | Backend API, Auth Düzeltmeleri ve TypeScript Migrasyon Toplantısı (55 Dakika)**
+        * *Gündem:* Mock veriden Supabase Route Handlers'a geçiş, Auth/login oturum hatasının çözümü, proje genelinde TypeScript dönüşümü.
+        * *Özet & Kararlar:* 21 adet REST API endpoint'i tamamlandı. Supabase Auth SSR middleware'deki oturum çerezi senkronizasyonu düzeltildi. Tüm `src/` dizini TypeScript'e taşındı. Demo seed script ile 13 kullanıcı ve 8 ders yüklendi. Yapay zeka altyapısı **Google Gemini** (`gemini-2.0-flash-lite`) modeline geçirildi.
+    * **30 Temmuz | ML Eşleşme Algoritması, Mesajlaşma ve Sertifikasyon Toplantısı (60 Dakika)**
+        * *Gündem:* SkillBridgeMatcher algoritması, match/chat UI yenileme, AI quiz/sertifika akışı, dashboard canlı aktivite banner'ı.
+        * *Özet & Kararlar:* `pgvector` ve Cosine Similarity tabanlı ML eşleşme algoritması (SkillBridgeMatcher) geliştirildi. Eşleşme sayfasına AI tarama animasyonu ve takas grupları eklendi. Mesajlaşma REST API ile Supabase'e bağlandı. Chat Quiz %70+ skorda otomatik sertifika üretiyor. Ödeme havuzu simülasyonu (escrow) tamamlandı.
+
+* **Sprint board update**: Sprint 3 süresince güncellenen Trello panosuna [Trello Backlog Board](https://trello.com/b/61xmZye8) adresi üzerinden ulaşılabilir.
+
+  <img width="1917" height="972" alt="image" src="https://github.com/user-attachments/assets/4205cdcd-1dbb-4b20-a46f-7e5d50fb517e" />
+
+* **Ürün Durumu**: Platform canlı önizleme adresinde ([https://skillbridge.hegg.tr/](https://skillbridge.hegg.tr/)) auth, dashboard, eşleşme, mesajlaşma, AI chatbot/quiz, sertifika ve ödeme akışları uçtan uca test edilebilir durumdadır. Jüri/demo kurulum adımları için [Kurulum Rehberi](env/README.md) dosyasına bakınız.
+
+* **Sprint Review**: Mock-first MVP'den Supabase destekli full-stack platforma geçiş tamamlandı. SkillBridgeMatcher ML eşleşme algoritması, 21 REST API endpoint'i ve AI modülleri hayata geçirildi. Demo hesabı (`demo@skillbridge.com` / `Demo123!`) ile tüm modüller denenebilir.
+
+* **Sprint Retrospective**: TypeScript migrasyonu kod kalitesini artırdı. API + mock fallback hibrit modeli demo güvenilirliği sağladı. Supabase Realtime anlık mesajlaşma bir sonraki iterasyona ertelendi.
+
 ---
 
 ## 🛠️ Kullanılan Teknolojiler
 
 - **[Next.js 16](https://nextjs.org/):** React tabanlı güçlü ve performanslı modern web framework'ü (App Router yapısı).
 - **[React 19](https://react.dev/):** Yeni nesil bileşen (component) mimarisi.
+- **[Supabase](https://supabase.com/):** Auth, PostgreSQL, Storage ve Row Level Security (RLS) altyapısı.
+- **[Google Gemini AI](https://ai.google.dev/):** Platform asistanı (chatbot) ve dinamik quiz soruları.
+- **[TypeScript](https://www.typescriptlang.org/):** Tip güvenli full-stack geliştirme.
 - **[Framer Motion](https://www.framer.com/motion/):** Akıcı, etkileşimli ve modern arayüz animasyonları.
 - **[Lucide React](https://lucide.dev/):** Hafif ve ölçeklenebilir modern ikon kütüphanesi.
 - **CSS Modules & Vanilla CSS:** Bileşen bazlı (component-scoped) stil mimarisi.
@@ -115,6 +143,7 @@
 | Klasör / Dosya | Açıklama |
 | :--- | :--- |
 | **`src/app/`** | Next.js App Router (Ana sayfalar ve Layout) |
+| ├── `api/` | REST API Route Handlers (mentors, lessons, match, chat, AI vb.) |
 | ├── `auth/` | Giriş ve Kayıt (Login/Register) |
 | ├── `certificates/` | Sertifika görüntüleme ve yönetimi |
 | ├── `chat/` | Sohbet ve mesajlaşma arayüzü |
@@ -126,8 +155,11 @@
 | ├── `payment/` | Ödeme adımları |
 | ├── `quiz/` | Testler ve sınavlar |
 | └── `settings/` | Kullanıcı hesap ayarları |
+| **`src/lib/`** | Supabase client, auth actions, API client, Gemini AI |
 | **`src/components/`** | Tekrar kullanılabilir (reusable) UI bileşenleri |
-| **`src/data/`** | Mock veriler, sabit değişkenler vb. |
+| **`src/data/`** | Mock veriler (API fallback) |
+| **`supabase/migrations/`** | Veritabanı migration dosyaları |
+| **`env/`** | Ortam değişkeni şablonları ve kurulum rehberi |
 
 ---
 
@@ -146,29 +178,24 @@ Projeyi yerel ortamınızda (local) çalıştırmak için aşağıdaki adımlar�
    npm install
    ```
 
-3. **Geliştirme Sunucusunu Başlatın:**
+3. **Ortam Değişkenlerini Ayarlayın:**
+   ```bash
+   npm run setup
+   ```
+   Supabase ve Gemini API anahtarlarını `.env.local` dosyasına ekleyin. Detaylı adımlar için [Kurulum Rehberi](env/README.md) dosyasına bakınız.
+
+4. **Veritabanını Hazırlayın:**
+   ```bash
+   npm run db:push
+   npm run db:seed
+   ```
+
+5. **Geliştirme Sunucusunu Başlatın:**
    ```bash
    npm run dev
    ```
 
-4. **Tarayıcıda Görüntüleyin:**
+6. **Tarayıcıda Görüntüleyin:**
    [http://localhost:3000](http://localhost:3000) adresine giderek platformu deneyimleyebilirsiniz.
 
-# Sprint 3
-
-* **Backlog düzeni ve Story seçimleri**: Projenin final fazında MVP ürünün eksikliklerinin giderilmesine, Auth mimarisindeki oturum hatalarının çözülmesine ve Yapay Zeka (ML) eşleşme algoritmalarının derinleştirilmesine odaklanılmıştır. Trello board üzerinde bu sprint için **toplam 35 Story Point (SP)** hedeflenmiş, sprint sonunda **30 Story Point'lik iş başarıyla tamamlanmıştır.**
-
-* **Daily Scrum**: Sprint 3 boyunca gerçekleştirilen toplantı notları ve alınan kararlar detaylı olarak [Sprint 3 Günlük Scrum Toplantı Notları](ProjectManagement/Sprint3Documents/DailyScrumMeetingNotesSprint3.md) dosyasında belgelenmiştir. Toplantıların kısa özeti aşağıdadır:
-
-    * **21 Temmuz | Sprint 2 Eksikleri ve Auth/Giriş Hata Analiz Toplantısı (55 Dakika)**
-        * *Gündem:* Kayıt olma sürecindeki veritabanı senkronizasyon hatasının (Kullanıcı veritabanına düşüyor ancak sisteme giriş yapılamıyor/oturum açılmıyor) incelenmesi, eksik kalan UI parçalarının tespiti ve sprint eforunun (Story Points) puanlanması.
-        * *Özet & Kararlar:* Supabase Auth SSR middleware katmanındaki oturum (session) çerezlerinin (cookies) tespiti yapıldı. Kayıt sonrasında `auth.users` ve `public.users` senkronizasyonunun başarılı olduğu fakat Next.js App Router tarafında login yönlendirmesinde yetkilendirme token'ının kaybolduğu saptandı. Bu kritik hatanın düzeltilmesi için acil task (5 SP) açıldı. Ayrıca genel ürün backlog'undaki kalan işler puanlanarak toplam 35 SP hedef belirlendi.
-    * **30 Temmuz | ML / Yapay Zeka Modeli Geliştirme ve Sertifikasyon Toplantısı (60 Dakika)**
-        * *Gündem:* Becerilere dayalı akıllı mentor eşleşmesi için ML/Yapay zeka altyapısının geliştirilmesi, otomatik PDF sertifika oluşturma modülü ve final testleri.
-        * *Özet & Kararlar:* OpenAI embedding modelleri ve Supabase `pgvector` eklentisi kullanılarak kullanıcı profil metinleri üzerinden vektörel benzerlik (Cosine Similarity) hesaplayan ML eşleşme algoritması geliştirildi. Mentor ve mentee ilgi alanları arasındaki anlamsal bağın %85 üzerinde doğrulukla kurulması sağlandı. Tamamlanan dersler sonrası otomatik üretilecek dijital sertifika altyapısı (`/certificates`) üzerinde çalışıldı.
-
-* **Sprint board update**: Sprint 3 süresince güncellenen Trello panosuna [Trello Backlog Board](https://trello.com/b/61xmZye8) adresi üzerinden ulaşılabilir.
-  <img width="1917" height="972" alt="image" src="https://github.com/user-attachments/assets/4205cdcd-1dbb-4b20-a46f-7e5d50fb517e" />
-  ![Sprint 1 Toplantı Ekran Görüntüsü](ProjectManagement/Sprint1Documents/meeting_screenshot.png)
-
-   
+   Demo giriş: `demo@skillbridge.com` / `Demo123!`

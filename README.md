@@ -61,7 +61,6 @@
     - *Gündem:* Ekip kapasitesinin değerlendirilmesi, görev dağılımının yapılması ve genel gelişim planının oluşturulması.
     - *Özet & Kararlar:* Ekip içi görev dağılımı gerçekleştirildi ve projenin genel ilerleme planı oluşturulmaya başlandı.
 
-  ![Sprint 1 Toplantı Ekran Görüntüsü](ProjectManagement/Sprint1Documents/meeting_screenshot.png)
 
 - **Sprint board update**: Sprint 1 süresince güncellenen Trello panosuna [Trello Backlog Board](https://trello.com/b/61xmZye8) adresi üzerinden ulaşılabilir.
   
@@ -98,7 +97,7 @@
 | :---: | :---: |
 | ![Keşfet](public/explore.png) | ![Mentor](public/mentor.png) |
 
-
+ <img width="1918" height="972" alt="image" src="https://github.com/user-attachments/assets/cee87ade-c7f9-42c0-9265-dcf9d503052c" />
 ---
 
 ## 🛠️ Kullanılan Teknolojiler
@@ -170,6 +169,6 @@ Projeyi yerel ortamınızda (local) çalıştırmak için aşağıdaki adımlar�
 
 * **Sprint board update**: Sprint 3 süresince güncellenen Trello panosuna [Trello Backlog Board](https://trello.com/b/61xmZye8) adresi üzerinden ulaşılabilir.
   <img width="1917" height="972" alt="image" src="https://github.com/user-attachments/assets/4205cdcd-1dbb-4b20-a46f-7e5d50fb517e" />
-  <img width="1918" height="972" alt="image" src="https://github.com/user-attachments/assets/cee87ade-c7f9-42c0-9265-dcf9d503052c" />
+  ![Sprint 1 Toplantı Ekran Görüntüsü](ProjectManagement/Sprint1Documents/meeting_screenshot.png)
 
    
